@@ -6,7 +6,7 @@ Every set is a `<set>.tar.gz` archive attached to a [release](../../releases) of
 
 ## Graph sets
 
-### [1/1] walshaw
+### [1/2] [walshaw](https://github.com/Quaha/YAGkP-Graphs/releases/tag/walshaw)
 
 All 34 graphs of [The Graph Partitioning Archive](https://chriswalshaw.co.uk/partition/) by Chris Walshaw, the standard benchmark for graph partitioning with tables of the best known cuts for k = 2, 4, …, 64 and imbalance of 0%, 1%, 3% and 5%.
 
@@ -52,3 +52,22 @@ Many download links of the archive are outdated (FTP servers, old addresses), so
 | wave | 156,317 | 1,059,331 | [Network Repository](https://networkrepository.com/wave.php), misc/wave | as is |
 | m14b | 214,765 | 1,679,018 | SuiteSparse, [DIMACS10/m14b](https://sparse.tamu.edu/DIMACS10/m14b) | as is |
 | auto | 448,695 | 3,314,611 | SuiteSparse, [DIMACS10/auto](https://sparse.tamu.edu/DIMACS10/auto) | as is |
+
+### [2/2] [large8](https://github.com/Quaha/YAGkP-Graphs/releases/tag/large8)
+
+8 graphs with 0.5-1.1M vertices from different domains. All graphs are undirected and connected, without self-loops.
+
+Two graphs, tx2010 and ca2010, have natural integer edge weights; their total edge weight is about 10^11. The other six graphs are unweighted (all edge weights are 1).
+
+The graphs come from the [SuiteSparse Matrix Collection](https://sparse.tamu.edu) and from [Network Repository](https://networkrepository.com). The graphs themselves were not changed. The files from Network Repository start with a non-standard header `%MatrixMarket`, which was corrected to `%%MatrixMarket`.
+
+| graph | n | m | what it is | edge weights | source | how obtained |
+|---|---:|---:|---|---|---|---|
+| tx2010 | 914,231 | 2,228,136 | 2010 US Census blocks of Texas: an edge joins blocks with a common border | integer, length of the common border (14 - 1.0·10^7) | SuiteSparse, [DIMACS10/tx2010](https://sparse.tamu.edu/DIMACS10/tx2010) | as is |
+| ca2010 | 710,145 | 1,744,683 | 2010 US Census blocks of California, same as tx2010 | integer, length of the common border (9 - 1.2·10^7) | SuiteSparse, [DIMACS10/ca2010](https://sparse.tamu.edu/DIMACS10/ca2010) | as is |
+| roadNet-PA | 1,087,562 | 1,541,514 | road network of Pennsylvania: intersections and roads | unweighted | [Network Repository](https://networkrepository.com/road-roadNet-PA.php), road/road-roadNet-PA | header fixed, renamed |
+| soc-flickr | 513,969 | 3,190,452 | friendships of Flickr users (photo sharing) | unweighted | [Network Repository](https://networkrepository.com/soc-flickr.php), soc/soc-flickr | header fixed |
+| soc-FourSquare | 639,014 | 3,214,986 | friendships of Foursquare users (location-based network); one vertex has degree 106,218 | unweighted | [Network Repository](https://networkrepository.com/soc-FourSquare.php), soc/soc-FourSquare | header fixed |
+| web-it-2004 | 509,338 | 7,178,413 | hyperlinks between pages of the .it domain, without direction | unweighted | [Network Repository](https://networkrepository.com/web-it-2004.php), web/web-it-2004 | header fixed |
+| NACA0015 | 1,039,183 | 3,114,818 | 2D mesh around a NACA 0015 airfoil (computational fluid dynamics) | unweighted | SuiteSparse, [DIMACS10/NACA0015](https://sparse.tamu.edu/DIMACS10/NACA0015) | as is |
+| delaunay_n20 | 1,048,576 | 3,145,686 | Delaunay triangulation of 2^20 random points in the unit square | unweighted | SuiteSparse, [DIMACS10/delaunay_n20](https://sparse.tamu.edu/DIMACS10/delaunay_n20) | as is |
