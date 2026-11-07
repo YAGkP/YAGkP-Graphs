@@ -10,6 +10,8 @@ Every set is a `<set>.tar.gz` archive attached to a [release](../../releases) of
 
 All 34 graphs of [The Graph Partitioning Archive](https://chriswalshaw.co.uk/partition/) by Chris Walshaw, the standard benchmark for graph partitioning with tables of the best known cuts for k = 2, 4, …, 64 and imbalance of 0%, 1%, 3% and 5%.
 
+The graphs of the archive are unweighted; numerical values in some SuiteSparse files (e.g. bcsstk*) are matrix entries, not edge weights, and should be ignored.
+
 Many download links of the archive are outdated (FTP servers, old addresses), so the graphs were taken from sources that are still available:
 
 - 32 graphs come from the [SuiteSparse Matrix Collection](https://sparse.tamu.edu); 4elt is stored there as Pothen/barth5, the matrix the archive itself refers to;
@@ -64,7 +66,7 @@ The graphs come from the [SuiteSparse Matrix Collection](https://sparse.tamu.edu
 | graph | n | m | what it is | edge weights | source | how obtained |
 |---|---:|---:|---|---|---|---|
 | tx2010 | 914,231 | 2,228,136 | 2010 US Census blocks of Texas: an edge joins blocks with a common border | integer, length of the common border (14 - 1.0·10^7) | SuiteSparse, [DIMACS10/tx2010](https://sparse.tamu.edu/DIMACS10/tx2010) | as is |
-| ca2010 | 710,145 | 1,744,683 | 2010 US Census blocks of California, same as tx2010 | integer, length of the common border (9 - 1.2·10^7) | SuiteSparse, [DIMACS10/ca2010](https://sparse.tamu.edu/DIMACS10/ca2010) | as is |
+| ca2010 | 710,145 | 1,744,683 | 2010 US Census blocks of California, same as tx2010 | integer, length of the common border (9 - 1.25·10^7) | SuiteSparse, [DIMACS10/ca2010](https://sparse.tamu.edu/DIMACS10/ca2010) | as is |
 | roadNet-PA | 1,087,562 | 1,541,514 | road network of Pennsylvania: intersections and roads | unweighted | [Network Repository](https://networkrepository.com/road-roadNet-PA.php), road/road-roadNet-PA | header fixed, renamed |
 | soc-flickr | 513,969 | 3,190,452 | friendships of Flickr users (photo sharing) | unweighted | [Network Repository](https://networkrepository.com/soc-flickr.php), soc/soc-flickr | header fixed |
 | soc-FourSquare | 639,014 | 3,214,986 | friendships of Foursquare users (location-based network); one vertex has degree 106,218 | unweighted | [Network Repository](https://networkrepository.com/soc-FourSquare.php), soc/soc-FourSquare | header fixed |
