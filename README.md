@@ -1,12 +1,12 @@
 # YAGkP-Graphs
 
-Graph sets for testing and benchmarking [Yet Another Graph k-Partition Library (YAGkP)](https://github.com/Quaha/YAGkP-Lib).
+Graph sets for testing and benchmarking [Yet Another Graph k-Partition Library (YAGkP)](https://github.com/YAGkP/YAGkP-Lib).
 
 Every set is a `<set>.tar.gz` archive attached to a [release](../../releases) of this repository, with one Matrix Market (`.mtx`) file per graph. The graphs are not stored in the repository itself.
 
 ## Graph sets
 
-### [1/2] [walshaw](https://github.com/Quaha/YAGkP-Graphs/releases/tag/walshaw)
+### [1/2] [walshaw](https://github.com/YAGkP/YAGkP-Graphs/releases/tag/walshaw)
 
 All 34 graphs of [The Graph Partitioning Archive](https://chriswalshaw.co.uk/partition/) by Chris Walshaw, the standard benchmark for graph partitioning with tables of the best known cuts for k = 2, 4, …, 64 and imbalance of 0%, 1%, 3% and 5%.
 
@@ -55,7 +55,7 @@ Many download links of the archive are outdated (FTP servers, old addresses), so
 | m14b | 214,765 | 1,679,018 | SuiteSparse, [DIMACS10/m14b](https://sparse.tamu.edu/DIMACS10/m14b) | as is |
 | auto | 448,695 | 3,314,611 | SuiteSparse, [DIMACS10/auto](https://sparse.tamu.edu/DIMACS10/auto) | as is |
 
-### [2/2] [large8](https://github.com/Quaha/YAGkP-Graphs/releases/tag/large8)
+### [2/2] [large8](https://github.com/YAGkP/YAGkP-Graphs/releases/tag/large8)
 
 8 graphs with 0.5-1.1M vertices from different domains. All graphs are undirected and connected, without self-loops.
 
