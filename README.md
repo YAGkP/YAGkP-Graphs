@@ -6,7 +6,7 @@ Every set is a `<set>.tar.gz` archive attached to a [release](../../releases) of
 
 ## Graph sets
 
-### [1/2] [walshaw](https://github.com/YAGkP/YAGkP-Graphs/releases/tag/walshaw)
+### [1/3] [walshaw](https://github.com/YAGkP/YAGkP-Graphs/releases/tag/walshaw)
 
 All 34 graphs of [The Graph Partitioning Archive](https://chriswalshaw.co.uk/partition/) by Chris Walshaw, the standard benchmark for graph partitioning with tables of the best known cuts for k = 2, 4, …, 64 and imbalance of 0%, 1%, 3% and 5%.
 
@@ -55,7 +55,7 @@ Many download links of the archive are outdated (FTP servers, old addresses), so
 | m14b | 214,765 | 1,679,018 | SuiteSparse, [DIMACS10/m14b](https://sparse.tamu.edu/DIMACS10/m14b) | as is |
 | auto | 448,695 | 3,314,611 | SuiteSparse, [DIMACS10/auto](https://sparse.tamu.edu/DIMACS10/auto) | as is |
 
-### [2/2] [large8](https://github.com/YAGkP/YAGkP-Graphs/releases/tag/large8)
+### [2/3] [large8](https://github.com/YAGkP/YAGkP-Graphs/releases/tag/large8)
 
 8 graphs with 0.5-1.1M vertices from different domains. All graphs are undirected and connected, without self-loops.
 
@@ -73,3 +73,24 @@ The graphs come from the [SuiteSparse Matrix Collection](https://sparse.tamu.edu
 | web-it-2004 | 509,338 | 7,178,413 | hyperlinks between pages of the .it domain, without direction | unweighted | [Network Repository](https://networkrepository.com/web-it-2004.php), web/web-it-2004 | header fixed |
 | NACA0015 | 1,039,183 | 3,114,818 | 2D mesh around a NACA 0015 airfoil (computational fluid dynamics) | unweighted | SuiteSparse, [DIMACS10/NACA0015](https://sparse.tamu.edu/DIMACS10/NACA0015) | as is |
 | delaunay_n20 | 1,048,576 | 3,145,686 | Delaunay triangulation of 2^20 random points in the unit square | unweighted | SuiteSparse, [DIMACS10/delaunay_n20](https://sparse.tamu.edu/DIMACS10/delaunay_n20) | as is |
+
+### [3/3] [kahip9](https://github.com/YAGkP/YAGkP-Graphs/releases/tag/kahip9)
+
+9 graphs with 0.7-2.2M vertices from different domains, taken from the benchmark sets of the KaHIP group: all of them are in Set A of [KaMinPar](https://arxiv.org/abs/2105.02022) (`instances.csv` on its [page](https://ae.iti.kit.edu/documents/research/deep_mgp)), and belgium_osm and netherlands_osm are also the graphs bel and nld of [KaFFPa](https://arxiv.org/abs/1210.0477).
+
+All graphs are undirected, unweighted (as in the KaHIP benchmarks) and without self-loops.
+
+The graphs come from the [SuiteSparse Matrix Collection](https://sparse.tamu.edu) and [SNAP](https://snap.stanford.edu/data/). Graphs stored there as matrices with numerical values were converted to the pattern format: every stored entry (explicit zeros too) is an edge, the values and the diagonal are dropped. The number of vertices and edges is the same as in the KaMinPar table, except com-youtube (see below).
+
+| graph | n | m | what it is | source | how obtained |
+|---|---:|---:|---|---|---|
+| amazon-2008 | 735,323 | 3,523,472 | links between similar books in the Amazon store | SuiteSparse, [LAW/amazon-2008](https://sparse.tamu.edu/LAW/amazon-2008) | direction removed |
+| ecology1 | 1,000,000 | 1,998,000 | 1000 x 1000 grid of a landscape connectivity model (circuit theory in ecology) | SuiteSparse, [McRae/ecology1](https://sparse.tamu.edu/McRae/ecology1) | values and diagonal dropped |
+| rgg_n_2_20_s0 | 1,048,576 | 6,891,620 | random geometric graph: 2^20 random points in the unit square, an edge joins points closer than a threshold | SuiteSparse, [DIMACS10/rgg_n_2_20_s0](https://sparse.tamu.edu/DIMACS10/rgg_n_2_20_s0) | as is |
+| com-youtube | 1,134,890 | 2,987,624 | friendships of YouTube users; one vertex has degree 28,754 | [SNAP](https://snap.stanford.edu/data/com-Youtube.html), com-youtube.ungraph.txt.gz | edge list converted, vertices renumbered 1..n without gaps (KaMinPar lists 1,157,828 vertices, apparently with the 22,938 unused numbers as isolated vertices) |
+| thermal2 | 1,227,087 | 3,676,134 | finite element mesh of a steady-state thermal problem | SuiteSparse, [Schmid/thermal2](https://sparse.tamu.edu/Schmid/thermal2) | values and diagonal dropped, 958 isolated vertices removed (as in KaMinPar) |
+| belgium_osm | 1,441,295 | 1,549,970 | road network of Belgium from OpenStreetMap | SuiteSparse, [DIMACS10/belgium_osm](https://sparse.tamu.edu/DIMACS10/belgium_osm) | as is |
+| G3_circuit | 1,585,478 | 3,037,674 | circuit simulation | SuiteSparse, [AMD/G3_circuit](https://sparse.tamu.edu/AMD/G3_circuit) | values and diagonal dropped |
+| kkt_power | 2,063,494 | 6,482,320 | KKT system of an optimal power flow problem (nonlinear optimization) | SuiteSparse, [Zaoui/kkt_power](https://sparse.tamu.edu/Zaoui/kkt_power) | values and diagonal dropped |
+| netherlands_osm | 2,216,688 | 2,441,238 | road network of the Netherlands from OpenStreetMap | SuiteSparse, [DIMACS10/netherlands_osm](https://sparse.tamu.edu/DIMACS10/netherlands_osm) | as is |
+
